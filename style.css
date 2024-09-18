@@ -1,0 +1,80 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* スクロールバーを非表示 */
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 2rem;
+}
+
+#section1 {
+    background: linear-gradient(lightcoral, lightblue);
+}
+
+#section2 {
+    background:linear-gradient(lightblue, lightgreen);
+}
+
+#section3 {
+    background: linear-gradient(lightgreen, lightcoral);
+}
+
+h1 {
+    padding-left: 25px;
+    font-family: "Zen Kurenaido", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+p{
+    padding-left: 90px;
+    font-family: "Noto Sans JP", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.fade-in-text, .slide-in-text {
+    opacity: 0;
+    transition: opacity 2s, transform 2s; /* トランジションでアニメーション */
+    position: relative;
+}
+
+.fade-in-text.visible {
+    opacity: 1;
+}
+
+.slide-in-text {
+    transform: translateX(-100%);
+}
+
+.slide-in-text.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.myicon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 160px;
+}
+
+.tmyicon {
+    padding-left: 70px;
+}
+
+.dmyicon {
+    position: absolute;
+    top: 50px;
+    left: 180%;
+}
